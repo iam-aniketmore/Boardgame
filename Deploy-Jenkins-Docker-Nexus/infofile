@@ -1,0 +1,15 @@
+Description:
+Basic CI/CD pipeline jisme application build hota hai, Docker image banta hai aur artifacts Nexus Repository Manager me store hote hain.
+
+🛠 Tools Used:
+
+Jenkins
+
+Maven
+
+Docker
+
+Nexus
+
+🏗 Architecture:
+Developer → Jenkins → Maven Build → Docker Build → Nexus (store artifacts) → DockerHub (push image)
