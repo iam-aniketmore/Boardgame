@@ -1,0 +1,16 @@
+Description:
+Kubernetes deployment ko Helm Charts se manage karte ho aur OWASP Dependency Check se application dependency vulnerabilities detect karte ho.
+
+🛠 Tools Used:
+
+Jenkins
+
+Docker
+
+Kubernetes
+
+Helm
+
+OWASP Dependency Check
+
+🏗 Architecture:

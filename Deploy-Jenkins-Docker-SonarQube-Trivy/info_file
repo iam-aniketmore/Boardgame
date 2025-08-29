@@ -1,0 +1,17 @@
+Description:
+Is project me tum code quality aur image security introduce karte ho – SonarQube se static code analysis aur Trivy se Docker image scan.
+
+🛠 Tools Used:
+
+Jenkins
+
+Maven
+
+Docker
+
+SonarQube (code quality)
+
+Trivy (image scan)
+
+🏗 Architecture:
+Developer → Jenkins → SonarQube Scan → Maven Build → Docker Build → Trivy Scan → DockerHub

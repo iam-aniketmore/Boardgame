@@ -1,0 +1,24 @@
+Description:
+Full Observability Stack add karte ho – Monitoring (Prometheus + Grafana) and Logging (Loki).
+
+🛠 Tools Used:
+
+Jenkins
+
+Docker
+
+Kubernetes
+
+Helm
+
+ArgoCD
+
+Prometheus + Grafana (Monitoring)
+
+Loki (Logging)
+
+🏗 Architecture:
+Jenkins → Docker Build + Push → Git (Helm chart update)
+ArgoCD → Sync → K8s Deploy
+Prometheus → Metrics collection
+Grafana → Visualization dashboards

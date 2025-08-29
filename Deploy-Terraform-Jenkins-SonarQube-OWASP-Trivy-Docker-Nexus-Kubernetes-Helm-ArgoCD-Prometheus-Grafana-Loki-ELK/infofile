@@ -1,0 +1,29 @@
+Correct Order (DevOps Lifecycle)
+
+Terraform → Infra provisioning (AWS VPC, EC2, EKS cluster)
+
+Jenkins → CI/CD orchestrator
+
+SonarQube → Code Quality & Coverage analysis
+
+OWASP Dependency Check → Dependency vulnerability scan
+
+Trivy → Container & Image vulnerability scan
+
+Docker → Build & package application into container
+
+Nexus → Artifact & Docker image repository
+
+Kubernetes (EKS) → Deploy & orchestrate containers
+
+Helm → Package and manage k8s deployments
+
+ArgoCD → GitOps for automated deployment
+
+Prometheus → Metrics collection & monitoring
+
+Grafana → Visualization dashboards
+
+Loki → Centralized logging for containers
+
+ELK Stack (Elastic, Logstash, Kibana) → Advanced logging/analytics (optional alongside Loki)

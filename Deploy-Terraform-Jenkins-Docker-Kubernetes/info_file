@@ -1,0 +1,16 @@
+Description:
+Ab infrastructure provisioning add karte ho using Terraform. Terraform se EC2 + Kubernetes cluster banega, fir Jenkins se deploy.
+
+🛠 Tools Used:
+
+Terraform (Infra provisioning)
+
+Jenkins
+
+Docker
+
+Kubernetes (YAML manifests)
+
+🏗 Architecture:
+Terraform → AWS EC2 + K8s Cluster
+Developer → Jenkins → Docker Build + Push → kubectl apply → K8s Cluster

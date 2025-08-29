@@ -1,0 +1,20 @@
+Description:
+Yaha tum GitOps introduce karte ho with ArgoCD. Terraform se infra banta hai, Jenkins image build karta hai, aur ArgoCD + Helm deploy karta hai.
+
+🛠 Tools Used:
+
+Terraform
+
+Jenkins
+
+Docker
+
+Kubernetes
+
+Helm
+
+ArgoCD (GitOps)
+
+🏗 Architecture:
+Terraform → AWS Infra + K8s Cluster
+Jenkins → Docker Build + Push → Git (Helm chart update)
