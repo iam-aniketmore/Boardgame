@@ -18,6 +18,8 @@ This project demonstrates the implementation of a Continuous Integration and Con
     - Launch a new EC2 instance using the Amazon Linux AMI.
     - Ensure that the instance has enough resources and an open port for Jenkins (default is 8080).
     - Make sure to enable ports 22 (SSH) and 8080 (Jenkins) in the security group for access.
+<img width="1366" height="398" alt="Setup a Linux EC2 Instance" src="https://github.com/user-attachments/assets/a0838ed6-bc98-47f1-b196-7e19a43b4327" />
+
 
 2. **Install Java**
     - Java is required to run Jenkins and Maven. Run the following commands to install Java 17:
@@ -64,12 +66,16 @@ This project demonstrates the implementation of a Continuous Integration and Con
     - Access Jenkins at `http://<public-ip>:8080`
 
 7. **Get Jenkins Initial Admin Password**
+<img width="1597" height="813" alt="image" src="https://github.com/user-attachments/assets/418448db-278f-4ce8-89da-e9c9c968abea" />
+
     - Run the following command to get the Jenkins access password:
     ```bash
     cat /var/lib/jenkins/secrets/initialAdminPassword
     ```
     username `admin` password `admin`
     fullname `admin` email `admin@gmail.com`
+<img width="1606" height="812" alt="image" src="https://github.com/user-attachments/assets/a891581f-036d-45f8-9924-41802d6dc27d" />
+
 
 9. **Login to Jenkins**
     - Log into Jenkins using the password retrieved above.
@@ -77,6 +83,8 @@ This project demonstrates the implementation of a Continuous Integration and Con
         - **Docker plugin**
         - **Docker Pipeline**
         - **Maven Integration plugin**
+        - **Stage view**
+<img width="1607" height="813" alt="image" src="https://github.com/user-attachments/assets/d11545aa-0bc5-4b0b-b063-2732f5580d42" />
 
 ### Step 2: Create Jenkins Pipeline
 
@@ -88,6 +96,8 @@ This project demonstrates the implementation of a Continuous Integration and Con
 
 2. **Create Jenkins Pipeline Script**
     - Create a new pipeline job in Jenkins and add the following pipeline script and save and apply:
+  <img width="1595" height="811" alt="image" src="https://github.com/user-attachments/assets/5edd5d18-1821-49c4-85f1-2cbdd6047b6a" />
+
     ```groovy
     pipeline {
         agent any
@@ -140,12 +150,16 @@ This project demonstrates the implementation of a Continuous Integration and Con
 
 3. **Run the Pipeline**
     - Trigger the pipeline to run the build, tests, and deployment stages.
+<img width="1596" height="803" alt="image" src="https://github.com/user-attachments/assets/80a0f471-8d1b-411e-b3a0-0dfef37ae089" />
+<img width="1371" height="696" alt="Screenshot 2025-08-30 203507" src="https://github.com/user-attachments/assets/77bc5d3e-9ac4-43be-9df3-32ef18518daf" />
+
     - Once the pipeline completes, check if the application is deployed successfully by navigating to `http://<public-ip>:9090`.
 
 ### Step 3: Access the Application
 
 After successfully running the Jenkins pipeline, your **Boardgame** application should be accessible in your browser at the following URL: 
 `http://<public-ip>:9090`
+<img width="1916" height="957" alt="Screenshot 2025-08-30 203256" src="https://github.com/user-attachments/assets/866b5074-5b03-4c31-b584-a95e8e8d60e2" />
 
 This confirms that the application has been deployed inside a Docker container running on your EC2 instance.
 
@@ -168,5 +182,5 @@ This confirms that the application has been deployed inside a Docker container r
 
 - **Jenkins not starting**: Ensure Java is installed properly and there are no errors in the Jenkins logs.
 - **Docker image build failed**: Check the Dockerfile for issues or missing dependencies.
-- **Port 8080 not open**: Make sure the EC2 security group allows inbound traffic on port 8080.
+- **Port 9090 not open**: Make sure the EC2 security group allows inbound traffic on port 9090.
 
