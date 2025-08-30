@@ -1,7 +1,15 @@
-# Boardgame Project - CI/CD Pipeline with Jenkins, Docker, and Maven
+# Boardgame Project - Dockerized Application Deployment with CI/CD Pipeline with Jenkins, Docker, and Maven
 
 This project demonstrates the implementation of a Continuous Integration and Continuous Deployment (CI/CD) pipeline using **Jenkins**, **Docker**, and **Maven** for building and deploying a **Boardgame** application.
 
+## Prerequisites
+
+- **Amazon EC2 Instance**
+- **Java** installed on the server
+- **Docker** installed
+- **Maven** installed
+- **Jenkins** set up and running
+  
 ## Project Setup
 
 ### Step 1: Setup Server on AWS EC2 Instance
@@ -60,8 +68,10 @@ This project demonstrates the implementation of a Continuous Integration and Con
     ```bash
     cat /var/lib/jenkins/secrets/initialAdminPassword
     ```
+    username `admin` password `admin`
+    fullname `admin` email `admin@gmail.com`
 
-8. **Login to Jenkins**
+9. **Login to Jenkins**
     - Log into Jenkins using the password retrieved above.
     - In Jenkins, go to the **Manage Jenkins** section to install the following plugins:
         - **Docker plugin**
@@ -73,11 +83,11 @@ This project demonstrates the implementation of a Continuous Integration and Con
 1. **Configure Tools in Jenkins**
     - In the **Tools** section of Jenkins, add the following tools:
         - Git
-        - Maven (set the name to `mvn`)
-        - JDK (set the name to `java-17`)
+        - Maven (set the name to `mvn` and path `/opt/maven`)
+        - JDK (set the name to `java-17` and path `/usr/lib/jvm/java-27-amazon-corretto.x86_64`)
 
 2. **Create Jenkins Pipeline Script**
-    - Create a new pipeline job in Jenkins and add the following pipeline script:
+    - Create a new pipeline job in Jenkins and add the following pipeline script and save and apply:
     ```groovy
     pipeline {
         agent any
@@ -135,7 +145,7 @@ This project demonstrates the implementation of a Continuous Integration and Con
 ### Step 3: Access the Application
 
 After successfully running the Jenkins pipeline, your **Boardgame** application should be accessible in your browser at the following URL: 
-http://<public-ip>:9090
+`http://<public-ip>:9090`
 
 This confirms that the application has been deployed inside a Docker container running on your EC2 instance.
 
@@ -148,10 +158,10 @@ This confirms that the application has been deployed inside a Docker container r
 
 ## Prerequisites
 
-- **Amazon EC2 Instance** (preferably with a security group allowing ports 22 and 8080)
-- **Java 17** installed on the server
+- **Amazon EC2 Instance**
+- **Java** installed on the server
 - **Docker** installed
-- **Maven 3.9.6** installed
+- **Maven** installed
 - **Jenkins** set up and running
 
 ## Troubleshooting
